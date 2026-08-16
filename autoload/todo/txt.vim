@@ -64,19 +64,17 @@ function! s:append_to_file(file, lines)
 endfunction
 
 function! todo#txt#remove_completed()
-    " Check if we can write to done.txt before proceeding.
-
     let l:target_dir = expand('%:p:h')
     let l:todo_file = expand('%:p')
-    " Check for user-defined g:todo_done_filename
+
     if exists("g:todo_done_filename")
         let l:todo_done_filename = g:todo_done_filename
-    elseif expand('%:t') == 'Todo.txt'
-        let l:todo_done_filename = 'Done.txt'
     else
         let l:todo_done_filename = 'done.txt'
     endif
-    let l:done_file = substitute(substitute(l:todo_file, 'todo.txt$', l:todo_done_filename, ''), 'Todo.txt$', l:todo_done_filename, '')
+
+    let l:done_file = l:target_dir . '/' . l:todo_done_filename
+
     if !filewritable(l:done_file) && !filewritable(l:target_dir)
         echoerr "Can't write to file '" . l:todo_done_filename . "'"
         return

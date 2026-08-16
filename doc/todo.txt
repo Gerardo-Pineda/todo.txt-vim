@@ -41,7 +41,7 @@ CONTENTS                                                       *todo-contents*
 1.4 Mark as done:                                         *todo-commands-done*
 	`<localleader>x`   Mark current task as done
 	`<localleader>X`   Mark all tasks as done
-	`<localleader>D`   Move completed tasks to done.txt
+	`<localleader>D`   Move completed tasks to the done file
 
 See :h <localleader> for more information about the commands' prefix.
 
@@ -64,12 +64,17 @@ for example or if perhaps you just don't have/want python for vim: >
   1 - Load (default)
   0 - Don't load
 
+                                                      *'g:todo_todo_filename'*
+Specify a custom filename for todo entries:
+  let g:todo_done_filename = 'todo.md'
+
+   Default: todo.txt.
+
                                                       *'g:todo_done_filename'*
-Specify a custom filename for completed todo entries to be archived to. Useful
-for compatibility with other todo.txt editors, or as a matter of preference:
+Specify a custom filename for completed todo entries to be archived to:
   let g:todo_done_filename = 'completed.txt'
 
-   Default: Done.txt or done.txt based on todo.txt capitalization.
+   Default: done.txt.
 
 ===============================================================================
 vim:ft=help:et:ts=2:sw=2:sts=2:norl

@@ -1,6 +1,6 @@
 ### Why this fork?
 
-This fork adds support for custom filenames and syntax highlighting for key:value pairs.
+This fork adds support for custom filenames, syntax highlighting for key:value pairs and replaces the mark as completed keybind to act as a toggle.
 
 ### Quick install
 

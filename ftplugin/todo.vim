@@ -46,9 +46,9 @@ inoremap <script> <silent> <buffer> date<Tab> <C-R>=strftime("%Y-%m-%d")<CR>
 nnoremap <script> <silent> <buffer> <localleader>d :call todo#txt#replace_date()<CR>
 vnoremap <script> <silent> <buffer> <localleader>d :call todo#txt#replace_date()<CR>
 
-" Mark done {{{2
-nnoremap <script> <silent> <buffer> <localleader>x :call todo#txt#mark_as_done()<CR>
-vnoremap <script> <silent> <buffer> <localleader>x :call todo#txt#mark_as_done()<CR>
+" Toggle done {{{2
+nnoremap <script> <silent> <buffer> <localleader>x :call todo#txt#toggle_done()<CR>
+vnoremap <script> <silent> <buffer> <localleader>x :call todo#txt#toggle_done()<CR>
 
 " Mark all done {{{2
 nnoremap <script> <silent> <buffer> <localleader>X :call todo#txt#mark_all_as_done()<CR>

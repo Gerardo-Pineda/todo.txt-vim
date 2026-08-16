@@ -39,8 +39,8 @@ CONTENTS                                                       *todo-contents*
 	`date<tab>`        (Insert mode) Insert the current date
 
 1.4 Mark as done:                                         *todo-commands-done*
-	`<localleader>x`   Mark current task as done
-	`<localleader>X`   Mark all tasks as done
+	`<localleader>x`   Toggle current task as done and undone
+	`<localleader>X`   Toggle all tasks as done and undone
 	`<localleader>D`   Move completed tasks to the done file
 
 See :h <localleader> for more information about the commands' prefix.
